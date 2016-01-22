@@ -1,4 +1,6 @@
-# I've implement all the callbacks with logging printing something marked.
+# Assignment0
+
+I've implement all the callbacks with logging printing something marked.
 
 When I run the app, and then rotate the screen.
 First, onDestroy() is called, and then onCreate() is called.
