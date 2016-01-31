@@ -1,0 +1,10 @@
+Sorry for misunderstand the purpose of this assignement0, I thought all the thing I should upload is this txt. file.
+Here is my finding in this assignment0.
+
+I've implemented all lifecycle methods in this activity.
+
+when I run this app, it called onCreate, onStart, onResume.
+
+And then I rotate the phone, it called onPause, onStop, onDestroy, onCreate, onStart, onResume.
+
+Ruobing
