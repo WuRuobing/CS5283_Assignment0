@@ -1,0 +1,6 @@
+Yesterday I just upload the modified server and client files. Because I modified it based on the original server and client, the original
+one were overwritten.  I fixed it today, by dividing it into 4 java files, including SimpleServer, SimpleClient, EchoServer, EchoClient.
+
+Sorry about that..
+
+Ruobing
