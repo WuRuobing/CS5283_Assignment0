@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
  
-public class SimpleServer
+public class EchoServer
 {
     public static void main(String args[])
     {
@@ -23,6 +23,11 @@ public class SimpleServer
                  
                 //print outthe details of incoming data - client ip : client port - client message
                 System.out.println("Client IP: " + inPakcet.getAddress().getHostAddress() + " Client port : " + inPakcet.getPort() + " Message: " + s);
+                 
+                DatagramPacket outPacket = new DatagramPacket(s.getBytes() , s.getBytes().length , inPakcet.getAddress() , inPakcet.getPort());
+                sock.send(outPacket);
+                System.out.println("Server Send to: " + outPacket.getAddress().getHostAddress() + " Send to port : " + outPacket.getPort() + " Message: " + s);
+                
             }
         }
          
