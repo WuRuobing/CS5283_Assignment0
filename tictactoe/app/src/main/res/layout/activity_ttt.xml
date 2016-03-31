@@ -1,0 +1,417 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TTTActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Connecting to server..."
+                android:id="@+id/tvConnecting"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llLoginControls">
+
+            <TextView android:text="Name:" android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etName"
+                android:layout_weight="2" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Connect"
+                android:id="@+id/bConnect"
+                android:layout_weight=".1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llUsers">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"
+                    android:background="@android:color/holo_blue_bright"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Users"
+                    android:id="@+id/tvUsersTitle"
+                    android:layout_gravity="left" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvUsers"
+                    android:layout_gravity="left" />
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etUserName"
+                    android:layout_weight="2" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llHUsers">
+
+                    <Button
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="ListUsr"
+                        android:id="@+id/listUsr"
+                        android:layout_weight=".1" />
+
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="ListGpUsr"
+                        android:id="@+id/listGpUsr"
+                        android:layout_weight=".1" />
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="ListMyGp"
+                        android:id="@+id/listMyGp"
+                        android:layout_weight=".1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llGroups">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"
+                    android:background="@android:color/holo_blue_bright"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Groups"
+                    android:id="@+id/tvGroupsTitle"
+                    android:layout_gravity="left" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvGroups"
+                    android:layout_gravity="left" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Group name,capacity"
+                    android:id="@+id/etGroupName"
+                    android:layout_weight="2" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llHGroups">
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="List"
+                        android:id="@+id/listGP"
+                        android:layout_weight=".1" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="Join"
+                        android:id="@+id/joinGP"
+                        android:layout_weight=".1" />
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Create"
+                        android:id="@+id/createGP"
+                        android:layout_weight=".1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llPlay">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"
+                    android:background="@android:color/holo_blue_bright"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="TicTacToe!"
+                    android:id="@+id/ticTacToeTitle"
+                    android:layout_gravity="left" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Choose your symbol:"
+                        android:id="@+id/chooseYourSymbol"
+                        android:layout_gravity="left" />
+
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="O"
+                        android:id="@+id/symbolO"/>
+
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="X"
+                        android:id="@+id/symbolX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llHPlay">
+
+                    <EditText
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Group name"
+                        android:id="@+id/etPlayTTT"
+                        android:layout_weight="2" />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Play!"
+                        android:id="@+id/playTTT"
+                        android:layout_weight=".1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llPlayStatus">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="playStatus"
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:id="@+id/playStatus" />
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Back"
+                        android:layout_weight=".1"
+                        android:id="@+id/backGUP" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Chat Room\n"
+                    android:maxLines = "2"
+                    android:scrollbars = "vertical"
+                    android:gravity="bottom"
+                    android:id="@+id/playChatRoom"
+                    android:layout_gravity="left" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chatMsg"
+                        android:layout_weight="2" />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Send"
+                        android:id="@+id/sendMsg"
+                        android:layout_weight=".1" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:id="@+id/llBoard">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b00"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b01" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b02" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b10" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b11" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b12" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b20" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b21" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:enabled="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/b22" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
