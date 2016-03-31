@@ -31,7 +31,7 @@ public class TTTActivity extends ActionBarActivity {
 
     // server to connect to
     protected static final int GROUPCAST_PORT = 20000;
-    protected static final String GROUPCAST_SERVER = "tttserver.ddns.net";
+    protected static final String GROUPCAST_SERVER = "csx283.hopto.org";
 
     // networking
     Socket socket = null;
@@ -1011,7 +1011,7 @@ public class TTTActivity extends ActionBarActivity {
     void enableBoardClick() {
         for (int x = 0; x < 3; x++)
             for (int y = 0; y < 3; y++)
-                if ("".equals(boardboard[x][y].getText().toString()))
+                if ("".equals(board[x][y].getText().toString()))
                     board[x][y].setEnabled(true);
     }
 
